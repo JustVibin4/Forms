@@ -1,31 +1,56 @@
 <!DOCTYPE HTML>
-
 <html>
-
 <head>
   <title>Music Survey (Form)</title>
 
+  <link rel="stylesheet" href="survey.css">
 </head>
-
 <body>
+
   <div id="header">
-
+    <p>Survey Form</p>
   </div>
-<div id="container">
-<form
-  action="https://formspree.io/f/mqaldzqy"
-  method="POST"
->
+
+  <div id="container">
+    <form
+      action="https://formspree.io/f/mqaldzqy"
+      method="POST"
+    >
+
+      <h2>Music Survey</h2>
 
 
+      <label for="name" class="special">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
 
+      <label for="email" class="special">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
 
+      <legend class="special">Favorite Genre:</legend><br>
+      <input type="radio" id="rock" name="genre" value="Rock">
+      <label for="rock" class="special">Rock</label><br>
 
-</form>
+      <input type="radio" id="pop" name="genre" value="Pop">
+      <label for="pop" class="special">Pop</label><br>
 
+      <input type="radio" id="jazz" name="genre" value="Jazz">
+      <label for="jazz" class="special">Jazz</label><br>
 
-</div>
+      <label for="instrument" class="special">Do you play an instrument?</label><br>
+      <select id="instrument" name="instrument">
+        <option value="none">None</option>
+        <option value="guitar">Guitar</option>
+        <option value="piano">Piano</option>
+        <option value="drums">Drums</option>
+      </select><br>
+
+      <label for="comments" class="special">Additional Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br>
+
+      <input type="submit" value="Submit"><br>
+
+    </form>
+  </div>
 
 </body>
-
 </html>
